@@ -14,6 +14,7 @@ includes:
   - projects
   - people
   - categories
+  - users
 
 search: true
 ---
