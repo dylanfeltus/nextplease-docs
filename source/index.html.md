@@ -12,6 +12,7 @@ includes:
   - authentication
   - requests
   - projects
+  - categories
 
 search: true
 ---
