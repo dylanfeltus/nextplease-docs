@@ -517,13 +517,17 @@ html, body {
     color: #fff;
 
     margin: 0;
-    margin-right: 30px;
-    width: calc(50% - 60px);
+    
 
     float:right;
     clear:right;
 
     box-sizing: border-box;
+
+    @media (min-width: $phone-width + 1px) {
+      margin-right: 30px;
+      width: calc(50% - 60px);
+    }
 
     @extend %right-col;
 
