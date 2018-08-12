@@ -5,8 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - <a href='https://nextplease.io'>Go to Next Please</a>
 
 includes:
   - errors
@@ -23,22 +22,23 @@ Welcome!
 > To authorize, use this code:
 
 ```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+curl http://nextplease.test/api/v1/sessions \
+  -H "Content-Type: application/json" \
+  -d '{"email":"example@gmail.com","password":"password"}'
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> The above command returns JSON structured like this:
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+```json
+{
+  "email":"example@gmail.com",
+  "authentication_token":"4nxAn76-TumRoaexkDqV"
+}
+```
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+Next Please uses authentication tokens to allow access to the API.  
+ 
+You send email and password for the user you are trying to authenticate and receive a token.
 
 # Kittens
 
