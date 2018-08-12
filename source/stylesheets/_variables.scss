@@ -65,9 +65,9 @@ $main-text: $color--black !default; // main content text color
 $nav-text: $color--black !default;
 $nav-active-text: $color--white !default;
 $nav-active-parent-text: $color--black !default; // parent links of the current section
-$lang-select-text: $color--black !default; // color of unselected language tab text
-$lang-select-active-text: $color--black !default; // color of selected language tab text
-$lang-select-pressed-text: $color--black !default; // color of language tab text when mouse is pressed
+$lang-select-text: $color--white !default; // color of unselected language tab text
+$lang-select-active-text: $color--white !default; // color of selected language tab text
+$lang-select-pressed-text: $color--white !default; // color of language tab text when mouse is pressed
 
 
 // SIZES
