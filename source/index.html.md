@@ -15,6 +15,7 @@ includes:
   - people
   - categories
   - users
+  - account
 
 search: true
 ---
