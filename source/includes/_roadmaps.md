@@ -17,7 +17,6 @@ curl http://nextplease.test/api/v1/roadmaps \
     "id": 123,
     "priority": 1,
     "stage_id": 1,
-    "shipped_at": null,
     "created_at": "2018-08-10T22:16:06.547Z",
     "roadmapable_type": "Request",
     "roadmapable": {
@@ -33,6 +32,50 @@ This endpoint retrieves all items on the roadmap.
 ### HTTP Request
 
 `GET http://nextplease.test/api/v1/roadmaps`
+
+### Attributes
+
+Attribute | Type | Description
+--------- | ------- | -----------
+id | integer | Unique identifier for the roadmap item.
+priority | integer | Priority order of roadmap items from first to last.
+stage_id | integer | Unique identifier for the stage this roadmap item belongs to.
+created_at | datetime | When the item was added to the roadmap.
+roadmapable_type | string | This tells you the type of object that is on the roadmap. Roadmap items can be "Project" or "Request" types.
+
+## Get all changelog items
+
+> Example request
+
+```shell
+curl http://nextplease.test/api/v1/roadmaps/shipped \
+  -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
+```
+
+> Example response
+
+```json
+[
+  {
+    "id": 123,
+    "priority": 1,
+    "stage_id": 1,
+    "shipped_at": "2018-08-11T22:42:00.000Z",
+    "created_at": "2018-08-10T22:16:06.547Z",
+    "roadmapable_type": "Request",
+    "roadmapable": {
+        "id": 123,
+        "title": "Example request"
+    }
+  }
+]
+```
+
+This endpoint retrieves all items on the changelog.
+
+### HTTP Request
+
+`GET http://nextplease.test/api/v1/roadmaps/shipped`
 
 ### Attributes
 
