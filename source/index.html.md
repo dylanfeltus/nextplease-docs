@@ -15,6 +15,7 @@ includes:
   - people
   - categories
   - roadmaps
+  - comments
   - account
   - users
 
