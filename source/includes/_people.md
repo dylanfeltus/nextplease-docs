@@ -5,7 +5,7 @@
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/people \
+curl https://nextplease.io/api/v1/people \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -26,7 +26,7 @@ This endpoint retrieves all people.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/people`
+`GET https://nextplease.io/api/v1/people`
 
 ### Attributes
 
@@ -44,7 +44,7 @@ created_at | datetime | When the person was created.
 > Example request
 
 ```shell
-curl "http://nextplease.test/api/v1/people/<ID>"
+curl "https://nextplease.io/api/v1/people/<ID>"
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -75,7 +75,7 @@ This endpoint retrieves a specific person along with all associated requests.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/people/<ID>`
+`GET https://nextplease.io/api/v1/people/<ID>`
 
 ### Attributes
 
@@ -91,7 +91,7 @@ created_at | datetime | When the person was created.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/people \
+curl https://nextplease.io/api/v1/people \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"name":"Example person","email":"example@gmail.com"}'
@@ -115,7 +115,7 @@ This endpoint will create a new person.
 
 ### HTTP Request
 
-`POST http://nextplease.test/api/v1/people`
+`POST https://nextplease.io/api/v1/people`
 
 ### Parameters
 
@@ -129,7 +129,7 @@ email | string | The email of the person.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/people/<ID> \
+curl https://nextplease.io/api/v1/people/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"name":"New name"}' \
@@ -154,7 +154,7 @@ This endpoint will update an existing person.
 
 ### HTTP Request
 
-`PATCH http://nextplease.test/api/v1/people/<ID>`
+`PATCH https://nextplease.io/api/v1/people/<ID>`
 
 ### Parameters
 
@@ -168,7 +168,7 @@ email | string | The email of the person.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/people/<ID> \
+curl https://nextplease.io/api/v1/people/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -X DELETE
@@ -186,4 +186,4 @@ This endpoint will delete a person.
 
 ### HTTP Request
 
-`DELETE http://nextplease.test/api/v1/people/<ID>`
+`DELETE https://nextplease.io/api/v1/people/<ID>`

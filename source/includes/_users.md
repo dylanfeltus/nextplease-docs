@@ -5,7 +5,7 @@
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/users \
+curl https://nextplease.io/api/v1/users \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -29,7 +29,7 @@ This endpoint retrieves all users for an account.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/users`
+`GET https://nextplease.io/api/v1/users`
 
 ### Attributes
 

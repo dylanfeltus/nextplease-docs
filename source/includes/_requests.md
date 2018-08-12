@@ -5,7 +5,7 @@
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/requests \
+curl https://nextplease.io/api/v1/requests \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -31,7 +31,7 @@ This endpoint retrieves all requests.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/requests`
+`GET https://nextplease.io/api/v1/requests`
 
 ### Attributes
 
@@ -52,7 +52,7 @@ archived_at | datetime | When the request was archived. Null if the request isn'
 > Example request
 
 ```shell
-curl "http://nextplease.test/api/v1/requests/<ID>"
+curl "https://nextplease.io/api/v1/requests/<ID>"
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -100,7 +100,7 @@ This endpoint retrieves a specific request along with all associated people and 
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/requests/<ID>`
+`GET https://nextplease.io/api/v1/requests/<ID>`
 
 ### Attributes
 
@@ -121,7 +121,7 @@ archived_at | datetime | When the request was archived. Null if the request isn'
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/requests \
+curl https://nextplease.io/api/v1/requests \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"title":"Request title","content":"Description of the request.","category_id":1}'
@@ -150,7 +150,7 @@ This endpoint will create a new request.
 
 ### HTTP Request
 
-`POST http://nextplease.test/api/v1/requests`
+`POST https://nextplease.io/api/v1/requests`
 
 ### Parameters
 
@@ -165,7 +165,7 @@ category_id | integer | The ID for the category this request belongs to.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/requests/<ID> \
+curl https://nextplease.io/api/v1/requests/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"title":"New request title"}' \
@@ -195,7 +195,7 @@ This endpoint will update an existing request.
 
 ### HTTP Request
 
-`PUT http://nextplease.test/api/v1/requests/<ID>`
+`PUT https://nextplease.io/api/v1/requests/<ID>`
 
 ### Parameters
 
@@ -210,7 +210,7 @@ category_id | integer | The ID for the category this request belongs to.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/requests/<ID> \
+curl https://nextplease.io/api/v1/requests/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -X DELETE
@@ -228,4 +228,4 @@ This endpoint will delete a request.
 
 ### HTTP Request
 
-`DELETE http://nextplease.test/api/v1/requests/<ID>`
+`DELETE https://nextplease.io/api/v1/requests/<ID>`

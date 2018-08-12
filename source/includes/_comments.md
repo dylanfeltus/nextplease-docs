@@ -5,7 +5,7 @@
 > Example request
 
 ```shell
-curl "http://nextplease.test/api/v1/comments/<ID>"
+curl "https://nextplease.io/api/v1/comments/<ID>"
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -34,7 +34,7 @@ This endpoint retrieves a specific comment along with all replies.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/comments/<ID>`
+`GET https://nextplease.io/api/v1/comments/<ID>`
 
 ### Attributes
 

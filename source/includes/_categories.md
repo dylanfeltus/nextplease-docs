@@ -5,7 +5,7 @@
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/categories \
+curl https://nextplease.io/api/v1/categories \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -26,7 +26,7 @@ This endpoint retrieves all categories for an account.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/categories`
+`GET https://nextplease.io/api/v1/categories`
 
 ### Attributes
 

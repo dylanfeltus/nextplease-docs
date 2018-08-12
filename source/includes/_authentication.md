@@ -3,7 +3,7 @@
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/sessions \
+curl https://nextplease.io/api/v1/sessions \
   -H "Content-Type: application/json" \
   -d '{"email":"example@gmail.com","password":"password"}'
 ```

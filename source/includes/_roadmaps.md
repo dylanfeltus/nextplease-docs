@@ -5,7 +5,7 @@
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/roadmaps \
+curl https://nextplease.io/api/v1/roadmaps \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -31,7 +31,7 @@ This endpoint retrieves all items on the roadmap.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/roadmaps`
+`GET https://nextplease.io/api/v1/roadmaps`
 
 ### Attributes
 
@@ -48,7 +48,7 @@ roadmapable_type | string | This tells you the type of object that is on the roa
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/roadmaps/shipped \
+curl https://nextplease.io/api/v1/roadmaps/shipped \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -75,7 +75,7 @@ This endpoint retrieves all items on the changelog.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/roadmaps/shipped`
+`GET https://nextplease.io/api/v1/roadmaps/shipped`
 
 ### Attributes
 
@@ -93,7 +93,7 @@ roadmapable_type | string | This tells you the type of object that is on the roa
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/stages \
+curl https://nextplease.io/api/v1/stages \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -113,7 +113,7 @@ This endpoint retrieves all roadmap stages.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/stages`
+`GET https://nextplease.io/api/v1/stages`
 
 ### Attributes
 

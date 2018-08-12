@@ -5,7 +5,7 @@
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/projects \
+curl https://nextplease.io/api/v1/projects \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -29,7 +29,7 @@ This endpoint retrieves all projects.
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/projects`
+`GET https://nextplease.io/api/v1/projects`
 
 ### Attributes
 
@@ -48,7 +48,7 @@ archived_at | datetime | When the project was archived. Null if the project isn'
 > Example request
 
 ```shell
-curl "http://nextplease.test/api/v1/projects/<ID>"
+curl "https://nextplease.io/api/v1/projects/<ID>"
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
 ```
 
@@ -90,7 +90,7 @@ This endpoint retrieves a specific project along with all associated requests an
 
 ### HTTP Request
 
-`GET http://nextplease.test/api/v1/requests/<ID>`
+`GET https://nextplease.io/api/v1/requests/<ID>`
 
 ### Attributes
 
@@ -109,7 +109,7 @@ archived_at | datetime | When the project was archived. Null if the project isn'
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/projects \
+curl https://nextplease.io/api/v1/projects \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"title":"Project title","content":"Description of the project."}'
@@ -136,7 +136,7 @@ This endpoint will create a new project.
 
 ### HTTP Request
 
-`POST http://nextplease.test/api/v1/projects`
+`POST https://nextplease.io/api/v1/projects`
 
 ### Parameters
 
@@ -150,7 +150,7 @@ content | text | This is the description of the project.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/projects/<ID> \
+curl https://nextplease.io/api/v1/projects/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"title":"New project title"}' \
@@ -178,7 +178,7 @@ This endpoint will update an existing project.
 
 ### HTTP Request
 
-`PUT http://nextplease.test/api/v1/projects/<ID>`
+`PUT https://nextplease.io/api/v1/projects/<ID>`
 
 ### Parameters
 
@@ -192,7 +192,7 @@ content | text | This is the description of the project.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/projects/<ID> \
+curl https://nextplease.io/api/v1/projects/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -X DELETE
@@ -210,4 +210,4 @@ This endpoint will delete a project.
 
 ### HTTP Request
 
-`DELETE http://nextplease.test/api/v1/projects/<ID>`
+`DELETE https://nextplease.io/api/v1/projects/<ID>`
