@@ -8,7 +8,6 @@ toc_footers:
   - <a href='https://nextplease.io'>Go to Next Please</a>
 
 includes:
-  - introduction
   - authentication
   - requests
   - projects
