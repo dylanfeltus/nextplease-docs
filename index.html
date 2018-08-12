@@ -219,9 +219,6 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
@@ -264,6 +261,72 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#people" class="toc-h1 toc-link" data-title="People">People</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-people" class="toc-h2 toc-link" data-title="Get all people">Get all people</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-person" class="toc-h2 toc-link" data-title="Get a specific person">Get a specific person</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-person" class="toc-h2 toc-link" data-title="Create a person">Create a person</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-person" class="toc-h2 toc-link" data-title="Update a person">Update a person</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-person" class="toc-h2 toc-link" data-title="Delete a person">Delete a person</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#categories" class="toc-h1 toc-link" data-title="Categories">Categories</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-categories" class="toc-h2 toc-link" data-title="Get all categories">Get all categories</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#roadmap" class="toc-h1 toc-link" data-title="Roadmap">Roadmap</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-roadmap-items" class="toc-h2 toc-link" data-title="Get all roadmap items">Get all roadmap items</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-changelog-items" class="toc-h2 toc-link" data-title="Get all changelog items">Get all changelog items</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-stages" class="toc-h2 toc-link" data-title="Get all stages">Get all stages</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#comments" class="toc-h1 toc-link" data-title="Comments">Comments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-specific-comment" class="toc-h2 toc-link" data-title="Get a specific comment">Get a specific comment</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#account-info" class="toc-h1 toc-link" data-title="Account info">Account info</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-account-info" class="toc-h2 toc-link" data-title="Get account info">Get account info</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-users" class="toc-h2 toc-link" data-title="Get all users">Get all users</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='https://nextplease.io'>Go to Next Please</a></li>
@@ -272,13 +335,11 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome!</p>
-<h1 id='authentication'>Authentication</h1>
+        <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/sessions <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/sessions <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -d <span class="s1">'{"email":"example@gmail.com","password":"password"}'</span>
 </code></pre>
@@ -297,7 +358,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/requests <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/requests <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
 </code></pre>
 <blockquote>
@@ -319,7 +380,7 @@
 </span></code></pre>
 <p>This endpoint retrieves all requests.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://nextplease.test/api/v1/requests</code></p>
+<p><code>GET https://nextplease.io/api/v1/requests</code></p>
 <h3 id='attributes'>Attributes</h3>
 <table><thead>
 <tr>
@@ -378,7 +439,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://nextplease.test/api/v1/requests/&lt;ID&gt;"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nextplease.io/api/v1/requests/&lt;ID&gt;"</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
 </code></pre>
 <blockquote>
@@ -422,7 +483,7 @@
 </span></code></pre>
 <p>This endpoint retrieves a specific request along with all associated people and comments.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://nextplease.test/api/v1/requests/&lt;ID&gt;</code></p>
+<p><code>GET https://nextplease.io/api/v1/requests/&lt;ID&gt;</code></p>
 <h3 id='attributes-2'>Attributes</h3>
 <table><thead>
 <tr>
@@ -481,7 +542,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/requests <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/requests <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
   -d <span class="s1">'{"title":"Request title","content":"Description of the request.","category_id":1}'</span>
@@ -506,7 +567,7 @@
 </span></code></pre>
 <p>This endpoint will create a new request.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST http://nextplease.test/api/v1/requests</code></p>
+<p><code>POST https://nextplease.io/api/v1/requests</code></p>
 <h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -535,11 +596,11 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/requests/&lt;ID&gt; <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/requests/&lt;ID&gt; <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
   -d <span class="s1">'{"title":"New request title"}'</span> <span class="se">\</span>
-  -X PATCH
+  -X PUT
 </code></pre>
 <blockquote>
 <p>Example response</p>
@@ -561,7 +622,7 @@
 </span></code></pre>
 <p>This endpoint will update an existing request.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PATCH http://nextplease.test/api/v1/requests/&lt;ID&gt;</code></p>
+<p><code>PUT https://nextplease.io/api/v1/requests/&lt;ID&gt;</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -590,7 +651,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/requests/&lt;ID&gt; <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/requests/&lt;ID&gt; <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
   -X DELETE
@@ -604,12 +665,12 @@
 </span></code></pre>
 <p>This endpoint will delete a request.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE http://nextplease.test/api/v1/requests/&lt;ID&gt;</code></p>
+<p><code>DELETE https://nextplease.io/api/v1/requests/&lt;ID&gt;</code></p>
 <h1 id='projects'>Projects</h1><h2 id='get-all-projects'>Get all projects</h2>
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/projects <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
 </code></pre>
 <blockquote>
@@ -629,7 +690,7 @@
 </span></code></pre>
 <p>This endpoint retrieves all projects.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://nextplease.test/api/v1/projects</code></p>
+<p><code>GET https://nextplease.io/api/v1/projects</code></p>
 <h3 id='attributes'>Attributes</h3>
 <table><thead>
 <tr>
@@ -678,7 +739,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://nextplease.test/api/v1/projects/&lt;ID&gt;"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nextplease.io/api/v1/projects/&lt;ID&gt;"</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
 </code></pre>
 <blockquote>
@@ -716,7 +777,7 @@
 </span></code></pre>
 <p>This endpoint retrieves a specific project along with all associated requests and comments.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://nextplease.test/api/v1/requests/&lt;ID&gt;</code></p>
+<p><code>GET https://nextplease.io/api/v1/requests/&lt;ID&gt;</code></p>
 <h3 id='attributes-2'>Attributes</h3>
 <table><thead>
 <tr>
@@ -765,7 +826,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/projects <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
   -d <span class="s1">'{"title":"Project title","content":"Description of the project."}'</span>
@@ -788,7 +849,7 @@
 </span></code></pre>
 <p>This endpoint will create a new project.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST http://nextplease.test/api/v1/projects</code></p>
+<p><code>POST https://nextplease.io/api/v1/projects</code></p>
 <h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -812,11 +873,11 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/projects/&lt;ID&gt; <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects/&lt;ID&gt; <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
   -d <span class="s1">'{"title":"New project title"}'</span> <span class="se">\</span>
-  -X PATCH
+  -X PUT
 </code></pre>
 <blockquote>
 <p>Example response</p>
@@ -836,7 +897,7 @@
 </span></code></pre>
 <p>This endpoint will update an existing project.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PATCH http://nextplease.test/api/v1/projects/&lt;ID&gt;</code></p>
+<p><code>PUT https://nextplease.io/api/v1/projects/&lt;ID&gt;</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -860,7 +921,7 @@
 <blockquote>
 <p>Example request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl http://nextplease.test/api/v1/projects/15 <span class="se">\</span>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects/&lt;ID&gt; <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
   -X DELETE
@@ -874,7 +935,657 @@
 </span></code></pre>
 <p>This endpoint will delete a project.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE http://nextplease.test/api/v1/projects/&lt;ID&gt;</code></p>
+<p><code>DELETE https://nextplease.io/api/v1/projects/&lt;ID&gt;</code></p>
+<h1 id='people'>People</h1><h2 id='get-all-people'>Get all people</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/people <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example person"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all people.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/people</code></p>
+<h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Attribute</td>
+<td>Type</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>---------</td>
+<td>-------</td>
+<td>-----------</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the person.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the person.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The email of the person.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the person was created.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-person'>Get a specific person</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nextplease.io/api/v1/people/&lt;ID&gt;"</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example person"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"requests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Request title"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description of the request."</span><span class="p">,,</span><span class="w">
+      </span><span class="s2">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-12T02:08:45.008Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific person along with all associated requests.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/people/&lt;ID&gt;</code></p>
+<h3 id='attributes-2'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the person.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the person.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The email of the person.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the person was created.</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-person'>Create a person</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/people <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
+  -d <span class="s1">'{"name":"Example person","email":"example@gmail.com"}'</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successfully created person"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"person"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example person"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint will create a new person.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST https://nextplease.io/api/v1/people</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the person.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The email of the person.</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-person'>Update a person</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/people/&lt;ID&gt; <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
+  -d <span class="s1">'{"name":"New name"}'</span> <span class="se">\</span>
+  -X PUT
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"Successfully updated person"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"person"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"New name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint will update an existing person.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PATCH https://nextplease.io/api/v1/people/&lt;ID&gt;</code></p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the person.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The email of the person.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-person'>Delete a person</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/people/&lt;ID&gt; <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
+  -X DELETE
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"Successfully deleted person"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint will delete a person.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE https://nextplease.io/api/v1/people/&lt;ID&gt;</code></p>
+<h1 id='categories'>Categories</h1><h2 id='get-all-categories'>Get all categories</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/categories <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example category"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description for example category"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all categories for an account.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/categories</code></p>
+<h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the category.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>This is the name of the category.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>text</td>
+<td>This is the description of the category.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the category was created.</td>
+</tr>
+</tbody></table>
+<h1 id='roadmap'>Roadmap</h1><h2 id='get-all-roadmap-items'>Get all roadmap items</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/roadmaps <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stage_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-10T22:16:06.547Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"roadmapable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Request"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"roadmapable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example request"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all items on the roadmap.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/roadmaps</code></p>
+<h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the roadmap item.</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>Priority order of roadmap items from first to last.</td>
+</tr>
+<tr>
+<td>stage_id</td>
+<td>integer</td>
+<td>Unique identifier for the stage this roadmap item belongs to.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the item was added to the roadmap.</td>
+</tr>
+<tr>
+<td>roadmapable_type</td>
+<td>string</td>
+<td>This tells you the type of object that is on the roadmap. Roadmap items can be &quot;Project&quot; or &quot;Request&quot; types.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-changelog-items'>Get all changelog items</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/roadmaps/shipped <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stage_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shipped_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-11T22:42:00.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-10T22:16:06.547Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"roadmapable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Request"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"roadmapable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example request"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all items on the changelog.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/roadmaps/shipped</code></p>
+<h3 id='attributes-2'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the roadmap item.</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>integer</td>
+<td>Priority order of roadmap items from first to last.</td>
+</tr>
+<tr>
+<td>stage_id</td>
+<td>integer</td>
+<td>Unique identifier for the stage this roadmap item belongs to.</td>
+</tr>
+<tr>
+<td>shipped_at</td>
+<td>datetime</td>
+<td>When the roadmap item was marked shipped.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the item was added to the roadmap.</td>
+</tr>
+<tr>
+<td>roadmapable_type</td>
+<td>string</td>
+<td>This tells you the type of object that is on the roadmap. Roadmap items can be &quot;Project&quot; or &quot;Request&quot; types.</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-stages'>Get all stages</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/stages <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example stage"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all roadmap stages.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/stages</code></p>
+<h3 id='attributes-3'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the stage.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the stage.</td>
+</tr>
+<tr>
+<td>order</td>
+<td>integer</td>
+<td>Order of the stage, shown on the roadmap.</td>
+</tr>
+</tbody></table>
+<h1 id='comments'>Comments</h1><h2 id='get-a-specific-comment'>Get a specific comment</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nextplease.io/api/v1/comments/&lt;ID&gt;"</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This an example comment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"commentable_type"</span><span class="p">:</span><span class="s2">"Request"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"commentable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A comment!"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-12T01:50:44.148Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific comment along with all replies.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/comments/&lt;ID&gt;</code></p>
+<h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the comment.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>text</td>
+<td>Content of the comment.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>integer</td>
+<td>Unique identifier for the user who left this comment.</td>
+</tr>
+<tr>
+<td>commentable_type</td>
+<td>string</td>
+<td>This tells you the type of object that this comment is attached to. Commentables can be &quot;Request&quot;, &quot;Project&quot; or &quot;Comment&quot; types.</td>
+</tr>
+<tr>
+<td>commentable_id</td>
+<td>integer</td>
+<td>Unique identifier of the commentable.</td>
+</tr>
+</tbody></table>
+<h1 id='account-info'>Account info</h1><h2 id='get-account-info'>Get account info</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/accounts <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company_name"</span><span class="p">:</span><span class="s2">"ACME, Inc."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"brand_color"</span><span class="p">:</span><span class="s2">"DD3A92"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="s2">"http://s3.us-east-2.amazonaws.com/nextplease/../../"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"logo"</span><span class="p">:</span><span class="s2">"http://s3.us-east-2.amazonaws.com/nextplease/../../"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves some information for the current account.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/accounts</code></p>
+<h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the account.</td>
+</tr>
+<tr>
+<td>company_name</td>
+<td>string</td>
+<td>The company name for the account.</td>
+</tr>
+<tr>
+<td>brand_color</td>
+<td>string</td>
+<td>The hex code brand color for the account.</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>string</td>
+<td>The company avatar url if one exists.</td>
+</tr>
+<tr>
+<td>logo</td>
+<td>string</td>
+<td>The company logo url if one exists.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the accounts was created.</td>
+</tr>
+</tbody></table>
+<h1 id='users'>Users</h1><h2 id='get-all-users'>Get all users</h2>
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/users <span class="se">\</span>
+  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
+</code></pre>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="s2">"example@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example User"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"exampleuser"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"role"</span><span class="p">:</span><span class="s2">"owner"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="s2">"http://s3.us-east-2.amazonaws.com/nextplease/../../"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all users for an account.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://nextplease.io/api/v1/users</code></p>
+<h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>Unique identifier for the user.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The users email address.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The users name.</td>
+</tr>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>The username.</td>
+</tr>
+<tr>
+<td>role</td>
+<td>string</td>
+<td>The users access level. Options include <code>owner</code>, <code>admin</code>, <code>engineer</code>, <code>product owner</code>, <code>member</code></td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>string</td>
+<td>The users avatar if one exists.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the user was added to the account.</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
