@@ -169,7 +169,7 @@ curl http://nextplease.test/api/v1/requests/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"title":"New request title"}' \
-  -X PATCH
+  -X PUT
 ```
 
 > Example response
@@ -195,7 +195,7 @@ This endpoint will update an existing request.
 
 ### HTTP Request
 
-`PATCH http://nextplease.test/api/v1/requests/<ID>`
+`PUT http://nextplease.test/api/v1/requests/<ID>`
 
 ### Parameters
 

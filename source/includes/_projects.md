@@ -154,7 +154,7 @@ curl http://nextplease.test/api/v1/projects/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -d '{"title":"New project title"}' \
-  -X PATCH
+  -X PUT
 ```
 
 > Example response
@@ -178,7 +178,7 @@ This endpoint will update an existing project.
 
 ### HTTP Request
 
-`PATCH http://nextplease.test/api/v1/projects/<ID>`
+`PUT http://nextplease.test/api/v1/projects/<ID>`
 
 ### Parameters
 
@@ -192,7 +192,7 @@ content | text | This is the description of the project.
 > Example request
 
 ```shell
-curl http://nextplease.test/api/v1/projects/15 \
+curl http://nextplease.test/api/v1/projects/<ID> \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
   -X DELETE
