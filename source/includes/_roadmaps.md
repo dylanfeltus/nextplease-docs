@@ -41,7 +41,7 @@ id | integer | Unique identifier for the roadmap item.
 priority | integer | Priority order of roadmap items from first to last.
 stage_id | integer | Unique identifier for the stage this roadmap item belongs to.
 created_at | datetime | When the item was added to the roadmap.
-roadmapable_type | string | This tells you the type of object that is on the roadmap. Roadmap items can be "Project" or "Request" types.
+roadmapable_type | string | This tells you the type of object that is on the roadmap. For now, this can only be a "Request".
 
 ## Get all changelog items
 
@@ -86,7 +86,7 @@ priority | integer | Priority order of roadmap items from first to last.
 stage_id | integer | Unique identifier for the stage this roadmap item belongs to.
 shipped_at | datetime | When the roadmap item was marked shipped.
 created_at | datetime | When the item was added to the roadmap.
-roadmapable_type | string | This tells you the type of object that is on the roadmap. Roadmap items can be "Project" or "Request" types.
+roadmapable_type | string | This tells you the type of object that is on the roadmap. For now, this can only be a "Request".
 
 ## Get all stages
 

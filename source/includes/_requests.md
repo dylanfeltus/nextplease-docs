@@ -18,11 +18,10 @@ curl https://nextplease.io/api/v1/requests \
     "title": "Example title",
     "content": "Description for example request",
     "category_id": 123,
-    "project_id": 123,
     "public": true,
     "public_content": "This is the public description for example request",
     "created_at": "2018-08-08T18:46:03.081Z",
-    "archived_at": null
+    "status": "open"
   }
 ]
 ```
@@ -41,11 +40,10 @@ id | integer | Unique identifier for the request.
 title | string | This is the title of the request.
 content | text | This is the description of the request.
 category_id | integer | The ID for the category this request belongs to.
-project_id | integer | If the request is in a project, this will be the ID of that project.
 public | boolean | This will be true if the request is publicly available. This is false by default.
 public_content | text | This is the description that is shown on the public roadmap or changelog.
 created_at | datetime | When the request was created.
-archived_at | datetime | When the request was archived. Null if the request isn't archived.
+status | string | The status for the request. This can be "open", "review", "planned", "pending", or "closed"
 
 ## Get a specific request
 
@@ -64,11 +62,10 @@ curl "https://nextplease.io/api/v1/requests/<ID>"
   "title": "Example title",
   "content": "Description for example request",
   "category_id": 123,
-  "project_id": 123,
   "public": true,
   "public_content": "This is the public description for example request",
   "created_at": "2018-08-08T18:46:03.081Z",
-  "archived_at": null,
+  "status": "open",
   "people": [
     {
       "id": 123,
@@ -110,11 +107,10 @@ id | integer | Unique identifier for the request.
 title | string | This is the title of the request.
 content | text | This is the description of the request.
 category_id | integer | The ID for the category this request belongs to.
-project_id | integer | If the request is in a project, this will be the ID of that project.
 public | boolean | This will be true if the request is publicly available. This is false by default.
 public_content | text | This is the description that is shown on the public roadmap or changelog.
 created_at | datetime | When the request was created.
-archived_at | datetime | When the request was archived. Null if the request isn't archived.
+status | string | The status for the request. This can be "open", "review", "planned", "pending", or "closed"
 
 ## Create a request
 
@@ -137,11 +133,10 @@ curl https://nextplease.io/api/v1/requests \
     "title":"Example title",
     "content":"Description for example request",
     "category_id":123,
-    "project_id":123,
     "public":true,
     "public_content":"This is the public description for example request",
     "created_at":"2018-08-12T02:03:15.802Z",
-    "archived_at":null
+    "status": "open",
   }
 }
 ```
@@ -182,11 +177,10 @@ curl https://nextplease.io/api/v1/requests/<ID> \
     "title":"New request title",
     "content":"Description for example request",
     "category_id":123,
-    "project_id":123,
     "public":true,
     "public_content":"This is the public description for example request",
     "created_at":"2018-08-12T02:03:15.802Z",
-    "archived_at":null
+    "status": "open",
   }
 }
 ```
