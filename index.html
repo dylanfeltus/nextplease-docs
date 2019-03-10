@@ -242,26 +242,6 @@
               </ul>
           </li>
           <li>
-            <a href="#projects" class="toc-h1 toc-link" data-title="Projects">Projects</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-projects" class="toc-h2 toc-link" data-title="Get all projects">Get all projects</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-project" class="toc-h2 toc-link" data-title="Get a specific project">Get a specific project</a>
-                  </li>
-                  <li>
-                    <a href="#create-a-project" class="toc-h2 toc-link" data-title="Create a project">Create a project</a>
-                  </li>
-                  <li>
-                    <a href="#update-a-project" class="toc-h2 toc-link" data-title="Update a project">Update a project</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-project" class="toc-h2 toc-link" data-title="Delete a project">Delete a project</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#people" class="toc-h1 toc-link" data-title="People">People</a>
               <ul class="toc-list-h2">
                   <li>
@@ -370,11 +350,10 @@
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example title"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description for example request"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"project_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the public description for example request"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -410,11 +389,6 @@
 <td>The ID for the category this request belongs to.</td>
 </tr>
 <tr>
-<td>project_id</td>
-<td>integer</td>
-<td>If the request is in a project, this will be the ID of that project.</td>
-</tr>
-<tr>
 <td>public</td>
 <td>boolean</td>
 <td>This will be true if the request is publicly available. This is false by default.</td>
@@ -430,9 +404,9 @@
 <td>When the request was created.</td>
 </tr>
 <tr>
-<td>archived_at</td>
-<td>datetime</td>
-<td>When the request was archived. Null if the request isn&#39;t archived.</td>
+<td>status</td>
+<td>string</td>
+<td>The status for the request. This can be &quot;open&quot;, &quot;review&quot;, &quot;planned&quot;, &quot;pending&quot;, or &quot;closed&quot;</td>
 </tr>
 </tbody></table>
 <h2 id='get-a-specific-request'>Get a specific request</h2>
@@ -450,11 +424,10 @@
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example title"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description for example request"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"project_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
   </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the public description for example request"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"people"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
@@ -513,11 +486,6 @@
 <td>The ID for the category this request belongs to.</td>
 </tr>
 <tr>
-<td>project_id</td>
-<td>integer</td>
-<td>If the request is in a project, this will be the ID of that project.</td>
-</tr>
-<tr>
 <td>public</td>
 <td>boolean</td>
 <td>This will be true if the request is publicly available. This is false by default.</td>
@@ -533,9 +501,9 @@
 <td>When the request was created.</td>
 </tr>
 <tr>
-<td>archived_at</td>
-<td>datetime</td>
-<td>When the request was archived. Null if the request isn&#39;t archived.</td>
+<td>status</td>
+<td>string</td>
+<td>The status for the request. This can be &quot;open&quot;, &quot;review&quot;, &quot;planned&quot;, &quot;pending&quot;, or &quot;closed&quot;</td>
 </tr>
 </tbody></table>
 <h2 id='create-a-request'>Create a request</h2>
@@ -557,11 +525,10 @@
     </span><span class="s2">"title"</span><span class="p">:</span><span class="s2">"Example title"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"content"</span><span class="p">:</span><span class="s2">"Description for example request"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"category_id"</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"project_id"</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public_content"</span><span class="p">:</span><span class="s2">"This is the public description for example request"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="s2">"2018-08-12T02:03:15.802Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -612,11 +579,10 @@
     </span><span class="s2">"title"</span><span class="p">:</span><span class="s2">"New request title"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"content"</span><span class="p">:</span><span class="s2">"Description for example request"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"category_id"</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"project_id"</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"public_content"</span><span class="p">:</span><span class="s2">"This is the public description for example request"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="s2">"2018-08-12T02:03:15.802Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -666,276 +632,6 @@
 <p>This endpoint will delete a request.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>DELETE https://nextplease.io/api/v1/requests/&lt;ID&gt;</code></p>
-<h1 id='projects'>Projects</h1><h2 id='get-all-projects'>Get all projects</h2>
-<blockquote>
-<p>Example request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects <span class="se">\</span>
-  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
-</code></pre>
-<blockquote>
-<p>Example response</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example project"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description for example project"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the public description for example project"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all projects.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://nextplease.io/api/v1/projects</code></p>
-<h3 id='attributes'>Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>integer</td>
-<td>Unique identifier for the project.</td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>This is the title of the project.</td>
-</tr>
-<tr>
-<td>content</td>
-<td>text</td>
-<td>This is the description of the project.</td>
-</tr>
-<tr>
-<td>public</td>
-<td>boolean</td>
-<td>This will be true if the project is publicly available. This is false by default.</td>
-</tr>
-<tr>
-<td>public_content</td>
-<td>text</td>
-<td>This is the description that is shown on the public roadmap or changelog.</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>datetime</td>
-<td>When the project was created.</td>
-</tr>
-<tr>
-<td>archived_at</td>
-<td>datetime</td>
-<td>When the project was archived. Null if the project isn&#39;t archived.</td>
-</tr>
-</tbody></table>
-<h2 id='get-a-specific-project'>Get a specific project</h2>
-<blockquote>
-<p>Example request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://nextplease.io/api/v1/projects/&lt;ID&gt;"</span>
-  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span>
-</code></pre>
-<blockquote>
-<p>Example response</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example project"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description for example project"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the public description for example project"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"requests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Request title"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description of the request."</span><span class="p">,,</span><span class="w">
-      </span><span class="s2">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-12T02:08:45.008Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A comment!"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-12T01:50:44.148Z"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific project along with all associated requests and comments.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://nextplease.io/api/v1/requests/&lt;ID&gt;</code></p>
-<h3 id='attributes-2'>Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>integer</td>
-<td>Unique identifier for the project.</td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>This is the title of the project.</td>
-</tr>
-<tr>
-<td>content</td>
-<td>text</td>
-<td>This is the description of the project.</td>
-</tr>
-<tr>
-<td>public</td>
-<td>boolean</td>
-<td>This will be true if the project is publicly available. This is false by default.</td>
-</tr>
-<tr>
-<td>public_content</td>
-<td>text</td>
-<td>This is the description that is shown on the public roadmap or changelog.</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>datetime</td>
-<td>When the project was created.</td>
-</tr>
-<tr>
-<td>archived_at</td>
-<td>datetime</td>
-<td>When the project was archived. Null if the project isn&#39;t archived.</td>
-</tr>
-</tbody></table>
-<h2 id='create-a-project'>Create a project</h2>
-<blockquote>
-<p>Example request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
-  -d <span class="s1">'{"title":"Project title","content":"Description of the project."}'</span>
-</code></pre>
-<blockquote>
-<p>Example response</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successfully created project"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"project"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Project title"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description of the project."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-12T03:00:31.879Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint will create a new project.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://nextplease.io/api/v1/projects</code></p>
-<h3 id='parameters'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>This is the title of the project.</td>
-</tr>
-<tr>
-<td>content</td>
-<td>text</td>
-<td>This is the description of the project.</td>
-</tr>
-</tbody></table>
-<h2 id='update-a-project'>Update a project</h2>
-<blockquote>
-<p>Example request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects/&lt;ID&gt; <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
-  -d <span class="s1">'{"title":"New project title"}'</span> <span class="se">\</span>
-  -X PUT
-</code></pre>
-<blockquote>
-<p>Example response</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"Successfully updated project"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"project"</span><span class="p">:{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="s2">"New project title"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description of the project."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-12T03:00:31.879Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"archived_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"public_content"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint will update an existing project.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PUT https://nextplease.io/api/v1/projects/&lt;ID&gt;</code></p>
-<h3 id='parameters-2'>Parameters</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>This is the title of the project.</td>
-</tr>
-<tr>
-<td>content</td>
-<td>text</td>
-<td>This is the description of the project.</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-project'>Delete a project</h2>
-<blockquote>
-<p>Example request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/projects/&lt;ID&gt; <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
-  -X DELETE
-</code></pre>
-<blockquote>
-<p>Example response</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"Successfully deleted project"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint will delete a project.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://nextplease.io/api/v1/projects/&lt;ID&gt;</code></p>
 <h1 id='people'>People</h1><h2 id='get-all-people'>Get all people</h2>
 <blockquote>
 <p>Example request</p>
@@ -1275,7 +971,7 @@
 <tr>
 <td>roadmapable_type</td>
 <td>string</td>
-<td>This tells you the type of object that is on the roadmap. Roadmap items can be &quot;Project&quot; or &quot;Request&quot; types.</td>
+<td>This tells you the type of object that is on the roadmap. For now, this can only be a &quot;Request&quot;.</td>
 </tr>
 </tbody></table>
 <h2 id='get-all-changelog-items'>Get all changelog items</h2>
@@ -1342,7 +1038,7 @@
 <tr>
 <td>roadmapable_type</td>
 <td>string</td>
-<td>This tells you the type of object that is on the roadmap. Roadmap items can be &quot;Project&quot; or &quot;Request&quot; types.</td>
+<td>This tells you the type of object that is on the roadmap. For now, this can only be a &quot;Request&quot;.</td>
 </tr>
 </tbody></table>
 <h2 id='get-all-stages'>Get all stages</h2>
@@ -1446,7 +1142,7 @@
 <tr>
 <td>commentable_type</td>
 <td>string</td>
-<td>This tells you the type of object that this comment is attached to. Commentables can be &quot;Request&quot;, &quot;Project&quot; or &quot;Comment&quot; types.</td>
+<td>This tells you the type of object that this comment is attached to. Commentables can be &quot;Request&quot; or &quot;Comment&quot; types.</td>
 </tr>
 <tr>
 <td>commentable_id</td>
