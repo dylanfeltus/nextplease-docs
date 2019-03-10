@@ -21,7 +21,7 @@ curl https://nextplease.io/api/v1/requests \
     "public": true,
     "public_content": "This is the public description for example request",
     "created_at": "2018-08-08T18:46:03.081Z",
-    "archived_at": null
+    "status": "open"
   }
 ]
 ```
@@ -43,7 +43,7 @@ category_id | integer | The ID for the category this request belongs to.
 public | boolean | This will be true if the request is publicly available. This is false by default.
 public_content | text | This is the description that is shown on the public roadmap or changelog.
 created_at | datetime | When the request was created.
-archived_at | datetime | When the request was archived. Null if the request isn't archived.
+status | string | The status for the request. This can be "open", "review", "planned", "pending", or "closed"
 
 ## Get a specific request
 
@@ -65,7 +65,7 @@ curl "https://nextplease.io/api/v1/requests/<ID>"
   "public": true,
   "public_content": "This is the public description for example request",
   "created_at": "2018-08-08T18:46:03.081Z",
-  "archived_at": null,
+  "status": "open",
   "people": [
     {
       "id": 123,
@@ -110,7 +110,7 @@ category_id | integer | The ID for the category this request belongs to.
 public | boolean | This will be true if the request is publicly available. This is false by default.
 public_content | text | This is the description that is shown on the public roadmap or changelog.
 created_at | datetime | When the request was created.
-archived_at | datetime | When the request was archived. Null if the request isn't archived.
+status | string | The status for the request. This can be "open", "review", "planned", "pending", or "closed"
 
 ## Create a request
 
@@ -136,7 +136,7 @@ curl https://nextplease.io/api/v1/requests \
     "public":true,
     "public_content":"This is the public description for example request",
     "created_at":"2018-08-12T02:03:15.802Z",
-    "archived_at":null
+    "status": "open",
   }
 }
 ```
@@ -180,7 +180,7 @@ curl https://nextplease.io/api/v1/requests/<ID> \
     "public":true,
     "public_content":"This is the public description for example request",
     "created_at":"2018-08-12T02:03:15.802Z",
-    "archived_at":null
+    "status": "open",
   }
 }
 ```
