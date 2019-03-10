@@ -43,5 +43,5 @@ Attribute | Type | Description
 id | integer | Unique identifier for the comment.
 content | text | Content of the comment.
 user_id | integer | Unique identifier for the user who left this comment.
-commentable_type | string | This tells you the type of object that this comment is attached to. Commentables can be "Request", "Project" or "Comment" types.
+commentable_type | string | This tells you the type of object that this comment is attached to. Commentables can be "Request" or "Comment" types.
 commentable_id | integer | Unique identifier of the commentable.
