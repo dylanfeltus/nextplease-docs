@@ -12,7 +12,6 @@ curl https://nextplease.io/api/v1/sessions \
 
 ```json
 {
-  "email":"example@gmail.com",
   "authentication_token":"4nxAn76-TumRoaexkDqV"
 }
 ```
