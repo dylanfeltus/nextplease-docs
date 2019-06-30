@@ -66,6 +66,12 @@ curl "https://nextplease.io/api/v1/requests/<ID>"
   "public_content": "This is the public description for example request",
   "created_at": "2018-08-08T18:46:03.081Z",
   "status": "open",
+  "tags": [
+    {
+      "id": 123,
+      "name": "Example tag"
+    }
+  ],
   "people": [
     {
       "id": 123,
@@ -73,13 +79,6 @@ curl "https://nextplease.io/api/v1/requests/<ID>"
       "email": "john@doe.com",
       "user_id": 1,
       "created_at": "2018-08-12T01:36:12.893Z"
-    },
-    {
-      "id": 124,
-      "name": null,
-      "email": "another@one.com",
-      "user_id": 2,
-      "created_at": "2018-08-12T01:41:35.759Z"
     }
   ],
   "comments": [
