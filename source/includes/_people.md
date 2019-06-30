@@ -39,6 +39,52 @@ name | string | The name of the person.
 email | string | The email of the person.
 created_at | datetime | When the person was created.
 
+## Get all companies
+
+> Example request
+
+```shell
+curl https://nextplease.io/api/v1/companies \
+  -H "X-User-Token: 4nxAn76-TumRoaexkDqV"
+```
+
+> Example response
+
+```json
+[
+  {
+    "id": 123,
+    "name": "Example company",
+    "website": "example.com",
+    "created_at": "2018-08-08T18:46:03.081Z",
+    "people": [
+      {
+        "id": 123,
+        "email": "example@gmail.com"
+      }
+    ]
+  }
+]
+```
+
+This endpoint retrieves all companies and the people associated with each.
+
+### HTTP Request
+
+`GET https://nextplease.io/api/v1/companies`
+
+### Attributes
+
+Attribute | Type | Description
+--------- | ------- | -----------
+Attribute | Type | Description
+--------- | ------- | -----------
+id | integer | Unique identifier for the company.
+name | string | The name of the company.
+website | string | The company's website.
+created_at | datetime | When the person was created.
+people | array | Collection of associated people with their ID and email.
+
 ## Get a specific person
 
 > Example request
