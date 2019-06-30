@@ -12,6 +12,7 @@ includes:
   - requests
   - people
   - categories
+  - tags
   - roadmaps
   - comments
   - account
