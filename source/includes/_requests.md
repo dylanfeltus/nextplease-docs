@@ -154,6 +154,8 @@ Attribute | Type | Description
 title | string | This is the title of the request.
 content | text | This is the description of the request.
 category_id | integer | The ID for the category this request belongs to.
+public | boolean | (Optional) This will be true if the request is publicly available. This is false by default.
+public_content | text | (Optional) This is the description that is shown on the public roadmap or changelog.
 
 ## Update a request
 
@@ -198,6 +200,8 @@ Attribute | Type | Description
 title | string | This is the title of the request.
 content | text | This is the description of the request.
 category_id | integer | The ID for the category this request belongs to.
+public | boolean | (Optional) This will be true if the request is publicly available. This is false by default.
+public_content | text | (Optional) This is the description that is shown on the public roadmap or changelog.
 
 ## Delete a request
 
