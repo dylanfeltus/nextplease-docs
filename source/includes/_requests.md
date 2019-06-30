@@ -26,7 +26,7 @@ curl https://nextplease.io/api/v1/requests \
 ]
 ```
 
-This endpoint retrieves all requests.
+This endpoint retrieves all requests. You can filter by status using a `status` param.
 
 ### HTTP Request
 
