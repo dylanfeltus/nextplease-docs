@@ -126,6 +126,7 @@ Attribute | Type | Description
 id | integer | Unique identifier for the person.
 name | string | The name of the person.
 email | string | The email of the person.
+company_name | string | The name of the company this person belongs to. We will find or create a company that matches this name.
 created_at | datetime | When the person was created.
 
 ## Create a person
@@ -136,7 +137,7 @@ created_at | datetime | When the person was created.
 curl https://nextplease.io/api/v1/people \
   -H "Content-Type: application/json" \
   -H "X-User-Token: 4nxAn76-TumRoaexkDqV" \
-  -d '{"name":"Example person","email":"example@gmail.com"}'
+  -d '{"name":"Example person","email":"example@gmail.com","company_name":"Example Co."}'
 ```
 
 > Example response
@@ -148,6 +149,7 @@ curl https://nextplease.io/api/v1/people \
     "id": 123,
     "name": "Example person",
     "email": "example@gmail.com",
+    "company_id": 123,
     "created_at": "2018-08-08T18:46:03.081Z",
   }
 }
@@ -187,6 +189,7 @@ curl https://nextplease.io/api/v1/people/<ID> \
     "id":123,
     "name":"New name",
     "email": "example@gmail.com",
+    "company_id": 123,
     "created_at": "2018-08-08T18:46:03.081Z",
   }
 }
@@ -204,6 +207,7 @@ Attribute | Type | Description
 --------- | ------- | -----------
 name | string | The name of the person.
 email | string | The email of the person.
+company_name | string | The name of the company this person belongs to. We will find or create a company that matches this name.
 
 ## Delete a person
 
