@@ -126,7 +126,6 @@ Attribute | Type | Description
 id | integer | Unique identifier for the person.
 name | string | The name of the person.
 email | string | The email of the person.
-company_name | string | The name of the company this person belongs to. We will find or create a company that matches this name.
 created_at | datetime | When the person was created.
 
 ## Create a person
@@ -167,6 +166,7 @@ Attribute | Type | Description
 --------- | ------- | -----------
 name | string | The name of the person.
 email | string | The email of the person.
+company_name | string | The name of the company this person belongs to. We will find or create a company that matches this name.
 
 ## Update a person
 
