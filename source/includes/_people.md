@@ -32,8 +32,6 @@ This endpoint retrieves all people.
 
 Attribute | Type | Description
 --------- | ------- | -----------
-Attribute | Type | Description
---------- | ------- | -----------
 id | integer | Unique identifier for the person.
 name | string | The name of the person.
 email | string | The email of the person.
@@ -75,8 +73,6 @@ This endpoint retrieves all companies and the people associated with each.
 
 ### Attributes
 
-Attribute | Type | Description
---------- | ------- | -----------
 Attribute | Type | Description
 --------- | ------- | -----------
 id | integer | Unique identifier for the company.
