@@ -17,7 +17,12 @@ curl https://nextplease.io/api/v1/people \
     "id": 123,
     "name": "Example person",
     "email": "example@gmail.com",
-    "created_at": "2018-08-08T18:46:03.081Z"
+    "created_at": "2018-08-08T18:46:03.081Z",
+    "company": {
+      "id": 123,
+      "name": "Example Co.",
+      "website": "https://example.com"
+    }
   }
 ]
 ```
@@ -109,7 +114,12 @@ curl "https://nextplease.io/api/v1/people/<ID>"
       "created_at": "2018-08-12T02:08:45.008Z",
       "archived_at": null
     }
-  ]
+  ],
+  "company": {
+    "id": 123,
+    "name": "Example Co.",
+    "website": "https://example.com"
+  }
 }
 ```
 
