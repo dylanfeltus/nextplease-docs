@@ -831,6 +831,11 @@
 <td>The email of the person.</td>
 </tr>
 <tr>
+<td>company_name</td>
+<td>string</td>
+<td>The name of the company this person belongs to. We will find or create a company that matches this name.</td>
+</tr>
+<tr>
 <td>created_at</td>
 <td>datetime</td>
 <td>When the person was created.</td>
@@ -843,7 +848,7 @@
 <pre class="highlight shell tab-shell"><code>curl https://nextplease.io/api/v1/people <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"X-User-Token: 4nxAn76-TumRoaexkDqV"</span> <span class="se">\</span>
-  -d <span class="s1">'{"name":"Example person","email":"example@gmail.com"}'</span>
+  -d <span class="s1">'{"name":"Example person","email":"example@gmail.com","company_name":"Example Co."}'</span>
 </code></pre>
 <blockquote>
 <p>Example response</p>
@@ -854,6 +859,7 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example person"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -899,6 +905,7 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"New name"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-08T18:46:03.081Z"</span><span class="p">,</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -923,6 +930,11 @@
 <td>email</td>
 <td>string</td>
 <td>The email of the person.</td>
+</tr>
+<tr>
+<td>company_name</td>
+<td>string</td>
+<td>The name of the company this person belongs to. We will find or create a company that matches this name.</td>
 </tr>
 </tbody></table>
 <h2 id='delete-a-person'>Delete a person</h2>
