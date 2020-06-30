@@ -88,6 +88,13 @@ curl "https://nextplease.io/api/v1/requests/<ID>"
       "user_id": 1,
       "created_at": "2018-08-12T01:50:44.148Z"
     }
+  ],
+  "attachments": [
+    {
+      "id": 123,
+      "title": "An attachment",
+      "link": "https://google.com",
+    }
   ]
 }
 ```
